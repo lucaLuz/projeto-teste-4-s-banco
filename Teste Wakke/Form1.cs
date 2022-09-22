@@ -52,7 +52,7 @@ namespace Teste_Wakke
             if (form.ShowDialog() == DialogResult.OK)
             {
                 Int32 selectedRowCount = dt_formulario.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                EditRow(selectedRowCount, form.Txdcid, form.Rbativo, form.Txtnome, form.Txtsobrenome, form.Txtdata, form.Txtaltura);
+                EditRow(selectedRowCount, form.Rbativo, form.Txtnome, form.Txtsobrenome, form.Txtdata, form.Txtaltura);
             }
         }
 
@@ -62,9 +62,8 @@ namespace Teste_Wakke
             dt_formulario.Update();
         }
 
-        public void EditRow(int idx, string txdcid, bool rbativo, string txtnome, string txtsobrenome, string txtdata, string txtaltura)
+        public void EditRow(int idx, bool rbativo, string txtnome, string txtsobrenome, string txtdata, string txtaltura)
         {
-            dt_formulario.Rows[idx].Cells[0].Value = txdcid;
             dt_formulario.Rows[idx].Cells[1].Value = rbativo;
             dt_formulario.Rows[idx].Cells[2].Value = txtnome;
             dt_formulario.Rows[idx].Cells[3].Value = txtsobrenome;
