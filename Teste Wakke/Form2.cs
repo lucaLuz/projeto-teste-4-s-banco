@@ -14,7 +14,6 @@ namespace Teste_Wakke
 {
     public partial class frm_cadastro : Form
     {
-        public virtual int RowIndex { get; }
         public string Txdcid { get; set; }
         public bool Rbativo { get; set; }
         public string Txtnome { get; set; }
